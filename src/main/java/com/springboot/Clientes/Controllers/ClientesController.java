@@ -31,7 +31,7 @@ public class ClientesController {
 return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getReason());
         }
     }
-    @GetMapping("/cliente")
+    @GetMapping("/clientes")
     public ResponseEntity<List<ClienteDTO>> findAll(){
         List<ClienteDTO> clienteList = clienteService.findAll().stream()
                 .map(cliente-> ClienteDTO.builder()
